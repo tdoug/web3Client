@@ -1,0 +1,23 @@
+{
+  "scripts": {
+    "start": "electron ."
+  },
+  "name": "web3client",
+  "description": "",
+  "version": "1.0.0",
+  "main": "main.js",
+  "dependencies": {
+    "electron": "^20.0.2"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tdoug/web3Client.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tdoug/web3Client/issues"
+  },
+  "homepage": "https://github.com/tdoug/web3Client#readme"
+}
