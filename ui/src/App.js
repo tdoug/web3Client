@@ -32,7 +32,8 @@ function App() {
   return (
     <div className="App">
       <h1>Hi!</h1>
-      <FullFileBrowser files={fileTree} />
+      <FullFileBrowser instanceName="left" files={localFiles} />
+      <FullFileBrowser instanceName="right" files={fileTree} />
     </div>
   );
 }
