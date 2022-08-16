@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { makeStorageClient } from './Web3'
+import { setChonkyDefaults } from 'chonky'
+import { ChonkyIconFA } from 'chonky-icon-fontawesome'
+import { FullFileBrowser } from 'chonky';
 import './App.css'
+
+setChonkyDefaults({ iconComponent: ChonkyIconFA })
 
 function App() {
   const [fileTree, setFileTree] = useState([])
@@ -12,6 +17,7 @@ function App() {
     for await (const upload of client.list()) {
       console.log(upload)
         files.push({
+          id: upload._id,
           name: upload.name
         })
     }
@@ -26,7 +32,7 @@ function App() {
   return (
     <div className="App">
       <h1>Hi!</h1>
-      
+      <FullFileBrowser files={fileTree} />
     </div>
   );
 }
